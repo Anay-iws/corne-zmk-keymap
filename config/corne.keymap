@@ -30,14 +30,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        Navigate_Spaceship {
-            bindings = <&mo 4>;
-            key-positions = <38 39>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -53,7 +46,7 @@
             display-name = "Base";
             bindings = <
 &kp ESCAPE  &kp Q  &kp W  &kp E      &kp R     &kp T          &kp Y      &kp U     &kp I      &kp O    &kp P     &kp BSPC
-&lm 4 TAB   &kp A  &kp S  &kp D      &kp F     &kp G          &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&lm 3 TAB   &kp A  &kp S  &kp D      &kp F     &kp G          &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z  &kp X  &kp C      &kp V     &kp B          &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                           &kp LCTRL  &kp LALT  &lt 2 SPACE    &lm 1 RET  &kp RALT  &kp RCTRL
             >;
@@ -91,21 +84,21 @@
             >;
         };
 
-        Function_Layer {
-            bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &kp F11  &kp F12  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans   &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-                          &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         Spaceship_Layout {
             bindings = <
 &kp SPACE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp CARET  &kp BACKSLASH  &kp TILDE      &kp LEFT_BRACKET  &kp LESS_THAN         &kp EQUAL  &kp GREATER_THAN       &kp RIGHT_BRACKET  &kp SLASH
 &kp SPACE  &kp EXCL          &kp AT             &kp HASH   &kp DOLLAR     &kp PERCENT    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp MINUS
 &kp SPACE  &kp SPACE         &kp SPACE          &kp SPACE  &kp SPACE      &kp SPACE      &kp PIPE          &kp AMPERSAND         &kp STAR   &kp PLUS               &kp UNDER          &kp GRAVE
                                                 &kp SPACE  &kp SPACE      &kp SPACE      &kp SPACE         &kp SPACE             &kp SPACE
+            >;
+        };
+
+        Function_Layer {
+            bindings = <
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans   &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
